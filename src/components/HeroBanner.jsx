@@ -9,13 +9,11 @@ export default function HeroBanner({ blok }) {
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Section - Text Content */}
                     <div className="text-left">
-                        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                            <span className="text-pink-500">The Digital Hub</span>
-                            <br />
-                            <span className="text-white">for the Swiss Insurance, Pension, and Broker Market</span>
-            </h1>
-                        <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                            {blok.hero_details || "EcoHub is the central platform in the insurance, pension, and broker market. Our innovative service offerings enable simple and secure data exchange according to market standards and facilitate digital communication among participants."}
+                        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight !text-white">
+                            <span className="text-pink-500">{blok.hero_title} </span>{blok.hero_title_white}
+                        </h1>
+                        <p className="text-lg lg:text-xl text-white leading-relaxed max-w-2xl">
+                            {blok.hero_details}
                         </p>
                     </div>
                     
