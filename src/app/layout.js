@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import StoryblokProvider from "@/components/StoryblokProvider";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+            <Header></Header>
             {children}
+            <Footer></Footer>
         </body>
         </html>
     </StoryblokProvider>
