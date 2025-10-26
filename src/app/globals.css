@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hero Banner Styles */
+.hero-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #151958 50%, #1d4ed8 100%);
+  min-height: 100vh;
+}
+
+/* Circuit Board Pattern */
+.circuit-pattern {
+  background-image: 
+    linear-gradient(90deg, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+.circuit-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(96, 165, 250, 0.1) 1px, transparent 1px);
+  background-size: 60px 60px, 80px 80px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* Custom Pink Color */
+.text-pink-500 {
+  color: #ec4899;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-banner {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 70vh;
+  }
+}
